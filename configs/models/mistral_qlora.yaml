@@ -1,0 +1,28 @@
+# Mistral-7B QLoRA Configuration
+# Requires 4-bit quantization for 8GB GPU
+
+model_name: "mistralai/Mistral-7B-v0.1"
+
+# LoRA Configuration
+lora:
+  r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  target_modules:
+    - q_proj
+    - v_proj
+    - k_proj
+    - o_proj
+    - gate_proj
+    - up_proj
+    - down_proj
+  bias: "none"
+  task_type: "CAUSAL_LM"
+
+# Quantization (REQUIRED for 7B model on 8GB)
+quantization: "4bit_double"   # 4-bit with double quantization
+
+# Model Loading
+trust_remote_code: true
+device_map: "auto"
+torch_dtype: "bfloat16"

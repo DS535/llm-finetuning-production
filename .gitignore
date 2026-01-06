@@ -1,0 +1,89 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# Model Checkpoints & Outputs
+checkpoints/
+outputs/
+experiments/results/*.bin
+experiments/results/*.pt
+experiments/results/*.pth
+experiments/results/*.safetensors
+*.ckpt
+runs/
+
+# Data & Cache
+data/
+.cache/
+*.csv
+*.json.lock
+datasets/
+huggingface_cache/
+
+# Weights & Biases
+wandb/
+*.wandb
+
+# TensorBoard
+logs/
+tensorboard/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment variables
+.env
+.env.local
+credentials.json
+secrets/
+
+# Large files
+*.bin
+*.safetensors
+*.h5
+*.onnx
+*.pb
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Specific to this project
+experiments/results/models/
+src/__pycache__/
+tests/__pycache__/

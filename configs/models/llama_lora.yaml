@@ -1,0 +1,24 @@
+# Llama-3.2 LoRA Configuration
+# Optimized for 8GB GPU memory
+
+model_name: "meta-llama/Llama-3.2-1B"
+
+# LoRA Configuration
+lora:
+  r: 16                    # LoRA rank
+  lora_alpha: 32          # LoRA alpha (typically 2*r)
+  lora_dropout: 0.05
+  target_modules:
+    - q_proj
+    - v_proj
+    - k_proj
+    - o_proj
+  bias: "none"
+  task_type: "CAUSAL_LM"
+
+# Quantization
+quantization: "4bit"       # Options: null, "8bit", "4bit", "4bit_double"
+
+# Model Loading
+trust_remote_code: true
+device_map: "auto"
